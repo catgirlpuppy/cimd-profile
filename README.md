@@ -1,5 +1,6 @@
-# cattreats.dev
+# catgirlpuppy/cimd-profile
 
-these are the files for my website :3  
--> https://cattreats.dev <-  
-its in astro & tailwind, and i host it with cloudflare :p
+source code for my website, available at https://charlotte.is-my.dog
+formerly, the website was at cattreats.dev, and the repo was `/cattreats.dev`
+
+written in astro and tailwind, hosted with cf pages. :)

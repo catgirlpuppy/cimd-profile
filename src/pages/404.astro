@@ -1,0 +1,24 @@
+---
+import Main from "../layouts/main.astro";
+---
+
+<Main title="Charlotte's awesome 404">
+  <div class="flex flex-col items-center rounded-xl p-4 backdrop-blur-2xl">
+    <p>
+      <span id="404msg">awruff </span>
+      <span class="text-ctp-subtext0"> (404)</span>
+    </p>
+    <a
+      href="/"
+      class="text-ctp-lavender text-lg hover:underline"
+    >
+      go home
+    </a>
+  </div>
+</Main>
+<script>
+  const errorMessageText = document.getElementById("404msg");
+  const list = ["this page doesn't exist :(", "searching for a page that doesn't exist...", "are you in the right place?", "are you lost?", "lost?", "this page doesn't exist! D:"];
+  const message = list[Math.floor(Math.random() * list.length)];
+  errorMessageText.textContent = message;
+</script>

@@ -1,94 +1,84 @@
 ---
 import Main from "../layouts/main.astro";
 import Social from "../components/social.astro";
+
+const socials = [
+  {
+    hover: "@catgirlpuppy",
+    icon: "fa7-brands:github",
+    link: "https://github.com/catgirlpuppy",
+  },
+
+  {
+    hover: "@catgirlpup",
+    icon: "fa7-brands:discord",
+    link: "https://discord.com/users/1408956378600702042",
+  },
+  {
+    hover: "@catgirlpuppy.01",
+    icon: "fa7-brands:signal-messenger",
+    link: "https://signal.me/#eu/Yj2KIwG3CTRCPVOJPg7bm_Mmagzpjq17UnbhWO3buIVFRpti6-RJmJZxrgISZDgo",
+  },
+  {
+    hover: "@catgirlpuppy",
+    icon: "fa7-brands:twitter",
+    link: "https://twitter.com/catgirlpuppy",
+  },
+];
 ---
 
-<Main title="Charlotte :3">
-  <div class="bg-ctp-base/40 gap-4 rounded-2xl p-4 text-base backdrop-blur-sm md:grid md:h-128 md:w-4xl md:grid-cols-3 md:grid-rows-3">
-    <div class="col-span-2 row-span-1 flex w-full flex-row items-center gap-4 rounded-lg p-4">
+<Main title="Charlotte's website :3">
+  <div class="bg-background/40 w-full flex-row gap-4 rounded-xl p-4 backdrop-blur-2xl md:w-208">
+    <div class="flex w-full flex-row items-center gap-2 pb-4">
       <img
         src="/img/pfp.jpg"
-        class="h-32 w-32 rounded-full"
         alt="Charlotte's profile picture"
+        class="h-28 w-28 rounded-full"
       />
-      <div class="text-ctp-subtext1 row-span-1 flex flex-col">
-        <h1 class="text-ctp-lavender text-4xl font-bold">Charlotte</h1>
-        <span class="text-lg">
-          <span
+      <div>
+        <h1>Charlotte</h1>
+        <p>
+          <span>it/its/she/her &bullet; </span><span
+            class="font-semibold"
             id="username"
-            class="font-medium"
           >
-            @stressfulpuppy
+            @catgirlpuppy
           </span>
-          <span> • it/she</span>
-        </span>
-        <div class="text-ctp-subtext0 mt-2 flex flex-row gap-1 text-3xl">
-          <Social
-            hover="@stressfulpuppy"
-            icon="fa7-brands:github"
-            link="https://github.com/stressfulpuppy"
-          />
-          <Social
-            hover="@stressfulpuppy"
-            icon="fa7-brands:discord"
-            link="https://discord.com/users/1408956378600702042"
-          />
-          <Social
-            hover="@catgirlpuppy.01"
-            icon="fa7-brands:signal-messenger"
-            link="https://signal.me/#eu/Yj2KIwG3CTRCPVOJPg7bm_Mmagzpjq17UnbhWO3buIVFRpti6-RJmJZxrgISZDgo"
-          />
-          <Social
-            hover="@stressfulpuppy"
-            icon="fa7-brands:twitter"
-            link="https://twitter.com/stressfulpuppy"
-          />
+        </p>
+        <div class="text-ctp-subtext1 flex flex-row gap-0.5 text-3xl">
+          {socials.map((social) => <Social {...social} />)}
         </div>
       </div>
     </div>
 
-    <div class="text-ctp-subtext1 rounded-lg p-2 text-lg leading-relaxed md:col-span-2 md:row-span-2">
-      <h2 class="text-ctp-text text-2xl font-bold">about me</h2>
-      <p>im charlotte, a sixteen-year-old stressed puppygirl <span class="text-nowrap">:(</span></p>
-      <p>i'm a furry, too. my self-named sona (who's part-cat, part-dog) is loosely based off the colours of the monster ultra fantasy ruby red can!</p>
-      <p>i'm reasonably comfortable with astro and javascript, and i hope to major in IT, assuming that's still an industry when I graduate... day to day, i use windows, linux, and an ipad from my school. i am reasonably comfortable using linux on both servers and clients</p>
+    <div>
+      <h2>about me</h2>
+      <p>hi, i'm Charlotte, a sixteen-year-old puppygirl. :3</p>
+      <p>i'm taken!! :) i'm also a furry, and my <span class="text-ctp-subtext0">self-named</span> fursona <span class="text-ctp-subtext0">(which is part-cat, part-dog)</span> is loosely based off the colours of the monster ultra fantasy ruby red can. my favourite colours are pink and purple.</p>
+      <p>i'm fairly comfortable with linux servers and desktops, and i'm overwhelmingly more interested in hardware projects than i am software/websites.</p>
     </div>
 
-    <div class="text-ctp-subtext1 rounded-lg p-2 text-lg md:col-span-1 md:col-start-3 md:row-span-3 md:row-start-1">
-      <h2 class="text-ctp-text text-2xl font-bold">projects!!</h2>
-      <ul>
-        <li>
-          <h3 class="text-ctp-green text-xl font-semibold underline-offset-2 hover:underline">
-            <a
-              href="https://tadpole.cattreats.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              >tadpole</a
-            >
-          </h3>
-          <p>tadpole is a lightweight file host with discord authentication, written in astro and typescript.</p>
-          <a
-            href="https://github.com/stressfulpuppy/tadpole"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-ctp-subtext0 hover:text-ctp-green underline underline-offset-2"
-            >source</a
-          >
-        </li>
-        <li>
-          <h3 class="text-ctp-red text-xl font-semibold underline-offset-2 hover:underline">nestrec</h3>
-          <p>nestrec is a hardware and software <span class="font-bold">rec</span>reation of the google <span class="font-bold">nest</span> hub, intended to be more private. i hope that once i finish it, i can make it open source! but, like everything, i'm held back by cost of parts.</p>
-        </li>
-      </ul>
+    <div>
+      <h2>extras!</h2>
+      <p>
+        here you can see&nbsp;
+        <a
+          href="/projects"
+          class="text-ctp-lavender"
+          >my projects</a
+        >
+        . maybe one day, i'll make a blog. not today though :p
+      </p>
+      <p>my email is <span class="text-ctp-subtext0">spam@is-my.dog</span>, but you'll need to replace 'spam' with 'charlotte', else it will drop.</p>
     </div>
   </div>
-  <div class="bg-ctp-base/40 text-ctp-subtext0 mt-6 mb-4 rounded-full p-2 underline underline-offset-2 backdrop-blur-md md:mb-0">
-    <a
-      href="https://github.com/stressfulpuppy/cattreats.dev"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      made by a puppy. <span class="text-nowrap">:3</span>
-    </a>
-  </div>
+
+  <a
+    href="https://github.com/catgirlpuppy/cimd-profile"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-ctp-overlay2 bg-background/40 mt-4 mb-4 rounded-xl p-2 backdrop-blur-2xl md:mb-0"
+  >
+    made with my own two paws. <span class="text-nowrap">:3</span>
+  </a>
 </Main>

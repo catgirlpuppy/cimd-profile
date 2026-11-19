@@ -3,10 +3,23 @@
 @import "@catppuccin/tailwindcss/mocha.css";
 
 @theme {
-  --color-background: #1e5d5f;
+  --color-background: #170a36;
   --font-playpen: "Playpen Sans", "Comic Sans MS", sans-serif;
 }
-
-* {
-  text-wrap: pretty;
+@utility text-content {
+  @apply text-ctp-subtext1 text-lg text-pretty;
+}
+@layer base {
+  h1 {
+    @apply text-ctp-lavender text-4xl font-bold;
+  }
+  h2 {
+    @apply text-ctp-text text-2xl font-bold;
+  }
+  p {
+    @apply text-content;
+  }
+  a {
+    @apply decoration-2 underline-offset-2 hover:underline;
+  }
 }
